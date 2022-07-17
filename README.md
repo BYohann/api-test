@@ -10,4 +10,14 @@ Demonstrating a simple node APi
 
 * Run `npm install`
 * Run `npm run start` to start the local server
-* launch `http://localhost:3000` in the browser
+* launch `http://localhost:3000` in the browser`
+
+# API Endpoints
+
+## GET /players
+
+Return a list of all users sorted by id
+
+## GET /players/{ID}
+
+Return one user if it exists, return 404 otherwise
