@@ -1,0 +1,19 @@
+{
+  "name": "api-test",
+  "version": "1.0.0",
+  "description": "demonstrate simple Node.js api",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BYohann/api-test.git"
+  },
+  "author": "yohann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BYohann/api-test/issues"
+  },
+  "homepage": "https://github.com/BYohann/api-test#readme"
+}
