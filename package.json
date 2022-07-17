@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/BYohann/api-test/issues"
   },
-  "homepage": "https://github.com/BYohann/api-test#readme"
+  "homepage": "https://github.com/BYohann/api-test#readme",
+  "dependencies": {
+    "jest": "^28.1.3"
+  }
 }
