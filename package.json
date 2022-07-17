@@ -4,6 +4,7 @@
   "description": "demonstrate simple Node.js api",
   "main": "index.js",
   "scripts": {
+    "start": "HOST=127.0.0.1 PORT=3000 node src/api/index.js",
     "test": "jest"
   },
   "repository": {
