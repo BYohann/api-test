@@ -21,3 +21,7 @@ Return a list of all users sorted by id
 ## GET /players/{ID}
 
 Return one user if it exists, return 404 otherwise
+
+# Test usage
+
+* Run `npm run test`

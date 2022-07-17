@@ -2,7 +2,7 @@ const http = require('http');
 const playersGetAll = require("./functions/players-get-all/players-get-all.js");
 const playersGetById = require('./functions/players-get-by-id/players-get-by-id.js')
 
-module.exports = http.createServer((req, res) => {
+module.exports = http.createServer(async (req, res) => {
     let url = new URL(`http://${process.env.HOST}:${process.env.PORT}${req.url}`); // absolute URL
     res.setHeader('content-Type', 'Application/json'); //global setting in this sample app
 
@@ -11,14 +11,14 @@ module.exports = http.createServer((req, res) => {
         res.end(JSON.stringify({message: 'OK'}))
     }
     else if (url.pathname == '/players' && req.method === 'GET') { // GET /players for all players
-        const response = playersGetAll()
+        const response = await playersGetAll()
         res.statusCode = 200;
         res.end(JSON.stringify({message:'success', data:response}))
     }
-    else if (/^\/players\/(\d+)/.test(url.pathname) && req.method === 'GET') { // GET /players/{ID} for individual player
+    else if (/^\/players\/(\d+)/.test(url.pathname) && req.method === 'GET') { // GET /players/{id} for individual player
         const id = url.pathname.split('/').pop();
         const params = {playerId: id};
-        const response = playersGetById(params);
+        const response = await playersGetById(params);
         // if player does not exist in source data, provide 404
         if (!response) {
             res.statusCode = 404;
